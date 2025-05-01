@@ -1,0 +1,8 @@
+<div id="calendar">
+  <%= month_calendar do |date| %>
+    <% day_class = date.saturday? || date.sunday? ? 'weekend-day' : 'weekday' %>
+    <div class="<%= day_class %>">
+      <%= date.day %>
+    </div>
+  <% end %>
+</div>
